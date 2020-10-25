@@ -1,0 +1,10 @@
+plugins:
+  - jekyll-paginate
+
+include: ["_pages"]
+
+permalink: /:title/
+
+# Paginate
+paginate: 15
+paginate_path: /page/:num
