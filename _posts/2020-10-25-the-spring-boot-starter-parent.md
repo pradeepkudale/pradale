@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Spring Boot Starter Parent"
-date:   2020-20-25
+date:   2020-10-25
 categories: spring-boot
 tags: spring-boot spring-boot-starter-parent
 ---
