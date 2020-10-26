@@ -68,6 +68,6 @@ Transitive dependencies can be excluded from dependency as below.
 </dependency>
 ```
 ## Summary
-In this tutorial, we saw how we can use the spring-boot-starter-parent pom file to manage our dependencies and override the properties.
+In this tutorial, we saw how we can use the spring-boot-starter-parent artifact to manage our dependencies and override the properties.
 
 Source code for this tutorial is available on [Github]()
