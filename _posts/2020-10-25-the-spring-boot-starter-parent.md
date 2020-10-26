@@ -4,6 +4,7 @@ title:  "The Spring Boot Starter Parent"
 date:   2020-10-25
 categories: spring-boot
 tags: spring-boot spring-boot-starter-parent
+author: pradale
 ---
 # The Spring Boot Starter Parent
 
