@@ -14,12 +14,14 @@ title: PRADALE
         <div class="col-lg-9">
             <!-- Single Post Meta-->
             <div class="d-flex justify-content-between align-items-center pb-3">
-                <div><a class="scroll-to post-author" href="#author">
-                    <div class="post-author-avatar"><img src="{{ author.image }}" alt="Post Author"/>
-                    </div>
-                    <!-- Output author details if some exist. -->
+                <div>
                     {% if author %}
-                        <div class="post-author-name">{{ author.name }}</div></a>
+                        <a class="scroll-to post-author" href="#author">
+                            <div class="post-author-avatar">
+                                <img src="{{ author.image }}" alt="Post Author"/>
+                            </div>
+                            <div class="post-author-name">{{ author.name }}</div>
+                        </a>
                     {% endif %}
                 </div>
                 <div class="post-meta">
