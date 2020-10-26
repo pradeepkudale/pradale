@@ -50,7 +50,7 @@ If we have our own parent pom file and still we want to have all the benefits of
 	</dependencies>
 </dependencyManagement>
 ```
->import scope is only supported on a dependency of type `pom` in the `<dependencyManagement>` section.
+>>import scope is only supported on a dependency of type `pom` in the `<dependencyManagement>` section.
 
 ## How to Exclude Transitive dependency
 Transitive dependencies can be excluded from dependency as below.
