@@ -5,9 +5,8 @@ date:   2020-10-25
 categories: spring-boot
 tags: spring-boot spring-boot-starter-parent
 author: pradale
+description: The spring boot starter parent can be used to manage project dependencies efficiently. It takes away the hassle to manage common properties and dependency versions in our application. 
 ---
-# The Spring Boot Starter Parent
-
 The spring boot starter parent can be used to manage project dependencies efficiently. It takes away the hassle to manage common properties and dependency versions in our application.
 
 Spring boot inherits all its dependencies from **spring-boot-dependencies** and if needed we can always override the properties provided by starter-parent pom. 
