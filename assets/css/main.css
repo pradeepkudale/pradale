@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 200px;
 }
 
+.dropdown-menu {
+    font-size: 18px;
+}
 .mega-dropdown .widget.widget-custom-menu ul > li > a {
     font-size: 18px;
 }
@@ -26,25 +29,42 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px !important;
 }
 
-a:hover {
-    color: lightblue;
-    text-decoration: none;
-}
-
 .post-author .post-author-name {
     font-size: 18px;
 }
+
+.blog-card .post-title>a:hover {
+    color: #5695fe;
+    text-decoration: none;
+}
+
 
 .tag-link {
     font-size: 15px;
 }
 
+a {
+    color: #5695fe;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #5695fe;
+    text-decoration: none;
+}
+
 .navbar-nav .nav-item.active .nav-link {
-    color: lightblue;
+    color: #5695fe;
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
 }
 
 /* line between categories and tags buttons */
 .bg-gradient, .block-title::after, .animated-digits::after, .step .step-title::after, .btn-gradient, .btn-style-2.btn-gradient::after, .btn-style-2.btn-gradient:hover::before, .btn-style-6.btn-gradient::before, .accordion-style-3 .card-body::after, .accordion-style-3 [data-toggle="collapse"], .widget-title::after, .tag-link::before, .noUi-connect, .mobile-menu .dropdown-header::after, .blog-card .post-title::after {
-    background: lightblue !important;
+    background: #5695fe !important;
 }
 

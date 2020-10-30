@@ -65,7 +65,7 @@
                                     <div class="widget widget-custom-menu">
                                         <ul>
                                             {% for category in site.categories %}
-                                            <li><a href="{{site.baseurl}}/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a></li>
+                                            <li><a href="{{site.baseurl}}/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] }} ({{ category[1].size }})</a></li>
                                             {% endfor %}
                                         </ul>
                                     </div>
