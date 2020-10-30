@@ -33,7 +33,7 @@ With the above configuration, we can override the dependencies present in our pa
 	<hazelcast.version>3.12.7</hazelcast.version>
 </properties>
 ```
-To add a dependency that is not present in starter parent pom we have to add it under **dependencyManagement** or **dependencies** tag. If a dependency is added in these section then we have to mention it's version.
+To add a dependency that is not present in starter parent pom we have to add it under **dependencyManagement** or **dependencies** tag with it's version.
 
 ### The Dependency Management Tag
 If we have our own parent pom file and still we want to have all the benefits of spring boot starter then we can add the **spring-boot-dependencies** dependency under the dependency management tag as shown below.
