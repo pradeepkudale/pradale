@@ -146,7 +146,7 @@ title: PRADALE
 
                     <!-- Related Posts-->
                     <div class="widget widget-featured-posts">
-                        <h4 class="widget-title"> Featured posts</h4>
+                        <h4 class="widget-title">Related Posts</h4>
                         {% for post in site.tags.featured %}
                             <a class="featured-post" href="{{post.url}}">
                                 <div class="featured-post-info">
@@ -159,6 +159,25 @@ title: PRADALE
                                 </div>
                             </a>
                         {% endfor %}
+
+                        <!--
+
+                        <div class="related">
+                            <h3>Related Posts</h3>
+                            {% assign firstCategory = page.categories | first %}
+                            {% assign relatedCount = 0 %}
+                            {% for related in site.categories[firstCategory] %}
+                                {% unless page.permalink == related.permalink %}
+                                    {% assign relatedCount = relatedCount | plus: 1 %}
+                                    <a href="{{related.permalink}}">{{ related.title }}</a>
+                                {% endunless %}
+
+                                {% if relatedCount == 3 %}
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        -->
 
                     </div>
                     <!-- Tag Cloud-->
@@ -173,4 +192,16 @@ title: PRADALE
         </div>
     </div>
 </div>
+
+<aside class="social-share">
+    <h2>Share this:</h2>
+
+    <ul>
+        <li class="twitter"><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}{% if page.description %}&text={{ page.description | url_escape }}{% else %}{{ page.title | url_escape }}{% endif %}{% if site.twitter %}&via={{ site.twitter }}{% endif %}" title="Share on Twitter">Twitter</a></li>
+
+        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}{% if page.description %}&t={{ page.description | url_escape }}{% else %}{{ page.title | url_escape }}{% endif %}" title="Share on Facebook">Facebook</a></li>
+
+        <li class="googleplus"><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus">Google+</a></li>
+    </ul>
+</aside>
 
