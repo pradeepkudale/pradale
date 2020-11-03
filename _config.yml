@@ -1,10 +1,18 @@
 plugins:
   - jekyll-paginate
 
-include: ["_pages"]
+include: ["_pages","images"]
 
 permalink: /:title/
 
 # Paginate
 paginate: 15
 paginate_path: /page/:num
+
+highlighter: rouge
+
+markdown: CommonMarkGhPages
+
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
