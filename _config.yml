@@ -1,6 +1,7 @@
 plugins:
   - jekyll-paginate
 
+
 include: ["_pages","images"]
 
 permalink: /:title/
@@ -9,10 +10,8 @@ permalink: /:title/
 paginate: 15
 paginate_path: /page/:num
 
+markdown: kramdown
 highlighter: rouge
-
-markdown: CommonMarkGhPages
-
-commonmark:
-  options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

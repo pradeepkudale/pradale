@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spring Boot Packaging"
-date:   2020-11-02
+date:   2020-11-05
 categories: spring-boot
 tags: spring-boot spring-boot-maven-plugin
 author: pradale
@@ -9,8 +9,10 @@ description: The spring boot maven plugin helps us to create archives (jar files
 ---
 The spring-boot-maven-plugin can be used to create archives (jar or war files) which contains all the application dependencies.
 
-The default packaging in maven is **jar**
->>> <packaging>war</packaging>
+The default packaging in maven is 'jar'. 
+```xml
+<packaging>jar</packaging>
+```
 
 We can add the plugin in 'plugins' section of pom.xml. But if we use [spring-boot-starter-parent](/spring-boot-starter-parent) project to manage our dependencies 
 then we don't need to add the plugin in pom.xml file.
@@ -59,15 +61,13 @@ Dependencies can be excluded from packing. There are two ways one can exclude a 
 ### Plugin Goals
 The spring-boot-maven-plugin has below important goals.
 
-{:class="table table-bordered"}
-|---
  Goals        | Usage           
  ------------- |-------------
- spring-boot:run  | : Run the application
- spring-boot:start | : Start the application. Used in integration test.
- spring-boot:stop | : Stops the application which has been started by start goal.
+ spring-boot:run  | Run the application
+ spring-boot:start | Start the application. Used in integration test.
+ spring-boot:stop | Stops the application which has been started by start goal.
 
-Sample execution
+Example:
 > mvn spring-boot:run
 
 ### Layered Jar  
@@ -126,4 +126,4 @@ example.war
 ### Summary
 In this tutorial, we saw how we can use spring-boot-maven-plugin plugin for packing.
 
-Source code for this tutorial is available on [Github](https://github.com/pradeepkudale/pradale-tutorials/tree/main/spring-boot/spring-boot-starter-parent)
+Source code for this tutorial is available on [Github](https://github.com/pradeepkudale/pradale-tutorials/tree/spring-boot-packaging/spring-boot/packaging/spring-boot-packaging)

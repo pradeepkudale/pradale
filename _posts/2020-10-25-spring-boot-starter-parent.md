@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spring Boot Starter Parent"
-date:   2020-10-25
+date:   2020-11-05
 categories: spring-boot
 tags: spring-boot spring-boot-starter-parent
 author: pradale
@@ -9,7 +9,7 @@ description: The spring boot starter parent can be used to manage project depend
 ---
 The spring boot starter parent can be used to manage project dependencies efficiently. It takes away the hassle to manage common properties and dependency versions in our application.
 
-Spring boot inherits all its dependencies from **spring-boot-dependencies** and if needed we can always override the properties provided by starter-parent pom.
+Spring boot inherits all its dependencies from `spring-boot-dependencies` and if needed we can always override the properties provided by starter-parent pom.
 
 spring-boot-starter-parent project provides the following features:
 * Java 1.8 as the default compiler level.
@@ -23,9 +23,9 @@ We can configure a starter parent in two ways.
 
 ### Inheriting the Starter Parent POM
 
-Configure to inherit from **spring-boot-starter-parent** as shown below.
+Configure to inherit from `spring-boot-starter-parent` as shown below.
 ```xml
-<parent>`
+<parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>2.3.5.RELEASE</version>
@@ -40,7 +40,7 @@ With the above configuration, we can override the dependencies present in our pa
 	<hazelcast.version>3.12.7</hazelcast.version>
 </properties>
 ```
-To add a dependency that is not present in starter parent pom we have to add it under **dependencyManagement** or **dependencies** tag with it's version.
+To add a dependency that is not present in starter parent pom we have to add it under `<dependencyManagement>` or `<dependencies>` tag with it's version.
 
 ### The Dependency Management Tag
 If we have our own parent pom file and still we want to have all the benefits of spring boot starter then we can import the dependency management as a Bill of Materials [BOM](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#importing-dependencies) in the `<dependencyManagement>` section of the pom.xml file.
@@ -61,7 +61,7 @@ If we have our own parent pom file and still we want to have all the benefits of
 
 The above way has a different way to override individual dependencies. You cannot override the dependencies using properties. 
 
-To override the dependency, you need to add entries in the `<dependencyManagement>` section of your project before the spring-boot-dependencies entry like below.
+To override the dependency, you need to add entries in the <dependencyManagement> section of your project before the spring-boot-dependencies entry like below.
 
 ```xml
 <dependencyManagement>
