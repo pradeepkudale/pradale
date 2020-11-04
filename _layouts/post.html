@@ -54,15 +54,19 @@ title: PRADALE
                     <span class="dinline-block align-middle py-2 mr-2" style="font-size: 18px">
                         <strong>Share:</strong>
                     </span>
+                    <a class="social-btn sb-style-3 sb-twitter mb-0"
+                       href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}{% if page.description %}&text={{ page.description | url_escape }}{% else %}{{ page.title | url_escape }}{% endif %}{% if site.twitter %}&via={{ site.twitter }}{% endif %}"
+                       data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="socicon-twitter"></i>
+                    </a>
+                    <!--
+                    <a class="social-btn sb-style-3 sb-linkedin mb-0" href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+                        <i class="socicon-linkedin"></i>
+                    </a>
                     <a class="social-btn sb-style-3 sb-facebook mb-0" href="#" data-toggle="tooltip" data-placement="top" title="Facebook">
                         <i class="socicon-facebook"></i>
                     </a>
-                    <a class="social-btn sb-style-3 sb-twitter mb-0" href="#" data-toggle="tooltip" data-placement="top" title="Twitter">
-                        <i class="socicon-twitter"></i>
-                    </a>
-                    <a class="social-btn sb-style-3 sb-pinterest mb-0" href="#" data-toggle="tooltip" data-placement="top" title="Pinterest">
-                        <i class="socicon-pinterest"></i>
-                    </a>
+                    -->
                 </div>
             </div>
             <!-- Single Post Author-->
@@ -79,10 +83,12 @@ title: PRADALE
                     <p class="author-card-info">{{author.bio}}</p>
                     <div class="author-card-social-bar-wrap">
                         <div class="author-card-social-bar">
+                            <!--
                             <a class="social-btn sb-style-1 sb-facebook" href="#"><i class="socicon-facebook"></i></a>
                             <a class="social-btn sb-style-1 sb-pinterest" href="#"><i class="socicon-pinterest"></i></a>
                             <a class="social-btn sb-style-1 sb-twitter" href="#"><i class="socicon-twitter"></i></a>
-                            <a class="social-btn sb-style-1 sb-linkedin" href="#"><i class="socicon-linkedin"></i></a>
+                            -->
+                            <a class="social-btn sb-style-1 sb-linkedin" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}{% if page.description %}&text={{ page.description | url_escape }}{% else %}{{ page.title | url_escape }}{% endif %}{% if site.twitter %}&via={{ site.twitter }}{% endif %}"><i class="socicon-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -193,16 +199,4 @@ title: PRADALE
         </div>
     </div>
 </div>
-
-<aside class="social-share">
-    <h2>Share this:</h2>
-
-    <ul>
-        <li class="twitter"><a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}{% if page.description %}&text={{ page.description | url_escape }}{% else %}{{ page.title | url_escape }}{% endif %}{% if site.twitter %}&via={{ site.twitter }}{% endif %}" title="Share on Twitter">Twitter</a></li>
-
-        <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}{% if page.description %}&t={{ page.description | url_escape }}{% else %}{{ page.title | url_escape }}{% endif %}" title="Share on Facebook">Facebook</a></li>
-
-        <li class="googleplus"><a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google Plus">Google+</a></li>
-    </ul>
-</aside>
 
