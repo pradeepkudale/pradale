@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spring Boot Packaging"
-date:   2020-11-05
+date:   2020-11-10
 categories: spring-boot
 tags: spring-boot spring-boot-maven-plugin
 author: pradale
@@ -16,6 +16,27 @@ The default packaging in maven is 'jar'.
 
 We can add the plugin in 'plugins' section of pom.xml. But if we use [spring-boot-starter-parent](/spring-boot-starter-parent) project to manage our dependencies 
 then we don't need to add the plugin in pom.xml file.
+
+The Spring Boot Maven plugin provides below features:
+* Adds main class file path (Throws exception if there are multiple main classes)
+* Generates the build information like encoding, java version etc.
+* Adds any required systemProperties & EnvironmentVariables for tests.
+* Configure debug level jvm Parameters
+
+MANIFEST.MF file generated with `spring-boot-maven-plugin` plugin.
+```text
+Manifest-Version: 1.0
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Implementation-Title: spring-boot-packaging
+Implementation-Version: 2.3.5.RELEASE
+Start-Class: com.pradale.tutorials.SpringBootApplication
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Build-Jdk-Spec: 1.8
+Spring-Boot-Version: 2.3.5.RELEASE
+Created-By: Maven Jar Plugin 3.2.0
+Main-Class: org.springframework.boot.loader.JarLauncher
+```
 
 ### Dependency Exclusion from Packing
 Dependencies can be excluded from packing. There are two ways one can exclude a dependency from being packaged.
@@ -126,4 +147,4 @@ example.war
 ### Summary
 In this tutorial, we saw how we can use spring-boot-maven-plugin plugin for packing.
 
-Source code for this tutorial is available on [Github](https://github.com/pradeepkudale/pradale-tutorials/tree/spring-boot-packaging/spring-boot/packaging/spring-boot-packaging)
+Source code for this tutorial is available on [Github](https://github.com/pradeepkudale/pradale-tutorials/tree/main/spring-boot/packaging/spring-boot-packaging)
