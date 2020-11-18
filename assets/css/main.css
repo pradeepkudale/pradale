@@ -64,6 +64,12 @@ a:hover {
     font-size: 18px;
 }
 
+.cat-title>a {
+    transition: color .3s;
+    color: #343b43;
+    text-decoration: none;
+}
+
 /* line between categories and tags buttons */
 .bg-gradient, .block-title::after, .animated-digits::after, .step .step-title::after, .btn-gradient, .btn-style-2.btn-gradient::after, .btn-style-2.btn-gradient:hover::before, .btn-style-6.btn-gradient::before, .accordion-style-3 .card-body::after, .accordion-style-3 [data-toggle="collapse"], .widget-title::after, .tag-link::before, .noUi-connect, .mobile-menu .dropdown-header::after, .blog-card .post-title::after {
     background: #5695fe !important;
