@@ -1,0 +1,21 @@
+---
+layout: default
+title: PRADALE
+---
+{% include createx/post-breadcrumb.html %}
+
+<!-- Page Content-->
+<div class="container pb-5 mb-3">
+    <div class="row">
+        <div class="col-lg-9">
+            {% for post in site.categories[page.slug] %}
+            <dl>
+                <dt> <a href="{{post.url}}">{{ post.title }}</a> </dt>
+                <dd>{{ post.description }}</dd>
+                <dd class="mb-4"></dd>
+            </dl>
+            {% endfor %}
+        </div>
+        {% include right-sidebar.html %}
+    </div>
+</div>

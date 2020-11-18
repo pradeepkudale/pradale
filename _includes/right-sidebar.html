@@ -1,0 +1,66 @@
+<div class="col-lg-3">
+    <!-- Single Post Sidebar-->
+    <!-- Off-Canvas Toggle--><a class="offcanvas-toggle" href="#blog-single-sidebar" data-toggle="offcanvas"><i class="fe-icon-sidebar"></i></a>
+    <!-- Off-Canvas Container-->
+    <aside class="offcanvas-container" id="blog-single-sidebar">
+        <div class="offcanvas-scrollable-area px-4 pt-5 px-lg-0 pt-lg-0"><span class="offcanvas-close"><i class="fe-icon-x"></i></span>
+            <!-- Categories-->
+            <div class="widget widget-categories">
+                <h4 class="widget-title">Categories</h4>
+                <ul>
+                    {% assign categories_list = site.categories %}
+                    {% for category in categories_list %}
+                    <li>
+                        <a href="{{site.baseurl}}/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} &nbsp;({{ category[1].size }})</a>
+                    </li>
+                    {% endfor %}
+                    {% assign categories_list = nil %}
+                </ul>
+            </div>
+
+            <!-- Related Posts-->
+            <div class="widget widget-featured-posts">
+                <h4 class="widget-title">Related Posts</h4>
+                {% for post in site.tags.featured %}
+                <a class="featured-post" href="{{post.url}}">
+                    <div class="featured-post-info">
+                        <div class="featured-post-meta">
+                                        <span class="text-primary opacity-70">
+                                            <i class="fe-icon-calendar"></i>{{ post.date | date: '%b %d, %Y' }}</span><span class="ml-3">
+                                        </span>
+                        </div>
+                        <div class="featured-post-title">{{ post.title }}</div>
+                    </div>
+                </a>
+                {% endfor %}
+
+                <!--
+
+                <div class="related">
+                    <h3>Related Posts</h3>
+                    {% assign firstCategory = page.categories | first %}
+                    {% assign relatedCount = 0 %}
+                    {% for related in site.categories[firstCategory] %}
+                        {% unless page.permalink == related.permalink %}
+                            {% assign relatedCount = relatedCount | plus: 1 %}
+                            <a href="{{related.permalink}}">{{ related.title }}</a>
+                        {% endunless %}
+
+                        {% if relatedCount == 3 %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                -->
+
+            </div>
+            <!-- Tag Cloud-->
+            <div class="widget">
+                <h4 class="widget-title">Tag cloud</h4>
+                {% for tag in site.tags %}
+                <a class="tag-link" href="#">{{ tag[0] }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </aside>
+</div>

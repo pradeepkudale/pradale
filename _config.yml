@@ -2,7 +2,7 @@ plugins:
   - jekyll-paginate
 
 
-include: ["_pages","images"]
+include: ["_pages","_category","images"]
 
 permalink: /:title/
 
@@ -15,3 +15,8 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+# Exclude
+exclude: [
+    'README.md'
+]
