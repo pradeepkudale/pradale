@@ -3,7 +3,7 @@ layout: post
 title:  "Spring Boot Packaging"
 date:   2020-11-10
 categories: java
-tags: spring-boot-maven-plugin
+tags: core-java
 author: pradale
 description: The spring boot maven plugin helps us to create archives (jar files and war files) which contains all the application dependencies.
 ---
