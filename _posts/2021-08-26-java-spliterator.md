@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Java Spliterator"
-date:   2020-11-10
+date:   2021-08-26
 categories: java
 tags: core-java
 author: pradale
