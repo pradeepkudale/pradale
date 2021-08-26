@@ -5,7 +5,7 @@ date:   2020-11-10
 categories: java
 tags: core-java
 author: pradale
-description: The spring boot maven plugin helps us to create archives (jar files and war files) which contains all the application dependencies.
+description: The Spliterator interface was introduce in java 8. This can be used for traversing and partitioning elements of source. The source could be anything like an array, a Collection, an IO channel, or a generator function.
 ---
 
 The Spliterator interface was introduce in java 8. This can be used for traversing and partitioning elements of source. The source could be anything like an array, a Collection, an IO channel, or a generator function.
