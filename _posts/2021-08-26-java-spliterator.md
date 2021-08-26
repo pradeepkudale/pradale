@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Boot Packaging"
+title:  "Java Spliterator"
 date:   2020-11-10
 categories: java
 tags: core-java
